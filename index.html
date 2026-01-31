@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AR Restaurant Menu Test</title>
+<head>
+  <title>AR Restaurant Menu</title>
 
-    <!-- A-Frame Library -->
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- A-Frame Library -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 
-    <!-- AR.js Library -->
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+  <!-- AR.js Library -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
 
-  <body style="margin:0; overflow:hidden;">
+<body style="margin:0; overflow:hidden;">
 
-    <a-scene embedded arjs>
+  <a-scene embedded arjs>
 
-      <!-- Marker -->
-      <a-marker preset="hiro">
+    <!-- Hiro Marker -->
+    <a-marker preset="hiro">
 
-        <!-- RED BOX -->
-        <a-box position="0 0.5 0" material="color: red"></a-box>
+      <!-- 3D Burger Model -->
+      <a-entity 
+        gltf-model="models/burger.glb"
+        scale="0.5 0.5 0.5"
+        position="0 0 0">
+      </a-entity>
 
-      </a-marker>
+    </a-marker>
 
-      <!-- Camera -->
-      <a-entity camera></a-entity>
+    <!-- Camera -->
+    <a-entity camera></a-entity>
 
-    </a-scene>
+  </a-scene>
 
-  </body>
+</body>
 </html>
